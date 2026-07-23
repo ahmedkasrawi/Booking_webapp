@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-bg-main: var(--bg-main);
+  --color-text-main: var(--text-main);
+  --color-text-white: var(--text-white);
+  --color-text-black: var(--text-black);
+  --color-prg: var(--text-prg);
+  --color-text-const: var(--text-const);
+
+}
+
+
+:root {
+  --primary: #00bc7d;
+  --primary-hover: #00d28c;
+  --bg-main: #f1ebe6;
+  --text-main: #003e29;
+  --text-white:#f8fafc;
+  --text-black:#000;
+  --text-prg: #003e29c4;
+  --text-const: #003e29;
+}
+
+.dark {
+  --primary: #00bc7d;
+  --primary-hover: #00d28c;
+  --bg-main: #20241e;
+  --text-main: #f8fafc;
+  --text-white: #0c0f0d;
+  --text-prg: #6ac2a5d0;
+  --text-const: #003e29;
+  --text-black: #fff;
+}
+::selection {
+  background: var(--text-prg);
+  color:var(--bg-main)
+}
+html {
+  background-color: var(--bg-main);
+  color: var(--text-main) ;
+  
+}
+* {
+  box-sizing: border-box;
+}
+
+.hero {
+  background-image: url(./hero.jpg);
+  background-position-x: left;
+}
+
+.shadows {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.shadow:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
