@@ -1,9 +1,8 @@
 import AdminHeader from "../components/AdminHeader.jsx";
-import { useAllUsers, useUserStatus } from "../../hooks/useAdmin.js";
+import { useAllUsers } from "../../hooks/useAdmin.js";
 
 export default function UsersPage() {
   const { data } = useAllUsers();
-  //const { mutate } = useUserStatus()
   const list = data?.data?.users?.map((item) => {
     return (
       <div key={item._id} className="bg-text-main/20 p-2 rounded-xl shadow-sm shadow-text-black/50">

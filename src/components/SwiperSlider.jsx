@@ -5,13 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 // import required modules
-import { Pagination, Autoplay } from "swiper/modules";
+import {  Autoplay } from "swiper/modules";
 import Card from "./Card";
 
 function SwiperSlider({ allData, type }) {
-  let productsList = allData?.map((item) => {
+  let productsList = allData?.map((item,index) => {
     return (
-      <SwiperSlide className="py-5">
+      <SwiperSlide key={index} className="py-5">
         <Card data={item} type={type} className="bg-bg-main" />
       </SwiperSlide>
     );

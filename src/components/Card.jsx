@@ -1,4 +1,3 @@
-
 import Star from "@mui/icons-material/Star";
 export default function Card({
   title,
@@ -13,7 +12,11 @@ export default function Card({
       <div
         className={`border-2 pb-10 relative rounded-md duration-400 hover:-translate-y-1 ${className}`}
       >
-        <img src={"/hero-sm.jpg"} className="rounded-t-md bg-text-main/40 min-h-46 " alt="خبير" />
+        <img
+          src={"/hero-sm.jpg"}
+          className="rounded-t-md bg-text-main/40 min-h-46 "
+          alt="خبير"
+        />
         {children}
         <div className="absolute bottom-0 right-0 flex items-center justify-between w-full px-3">
           <h1 className="my-2 font-bold text-lg  top-3">{data?.title}</h1>
@@ -30,8 +33,14 @@ export default function Card({
         break;
       }
     }
-    const starsIcons = stars.map(() => {
-      return <Star sx={{ fontSize: "16px" }} className="text-amber-500" />;
+    const starsIcons = stars.map((index) => {
+      return (
+        <Star
+          key={index}
+          sx={{ fontSize: "16px" }}
+          className="text-amber-500"
+        />
+      );
     });
     return (
       <div

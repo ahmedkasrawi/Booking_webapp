@@ -10,7 +10,8 @@ export default function MobileMenu({
   user,
   children
 }) {
-  
+  if(isLoading ) return <span className="px-4 py-2 text-gray-500">Loading...</span>
+    
   return (
     <>
       {menuOpen && (
@@ -31,9 +32,7 @@ export default function MobileMenu({
           </div>
 
           <div className="mt-4 flex flex-col gap-3">
-            {isLoading ? (
-              <span className="px-4 py-2 text-gray-500">Loading...</span>
-            ) : user ? (
+            {user ? (
               <div className="flex items-center gap-4 w-full">
                 <Button
                   onClick={handleLogout}

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Input from "./Input";
 import LockPersonIcon from "@mui/icons-material/LockPerson";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRegister } from "../../hooks/useAuth";
 import { toast } from "react-hot-toast";
 

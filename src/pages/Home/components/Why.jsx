@@ -8,7 +8,7 @@ import {whyUs} from "../../../consts/index.js"
 export default function Why({ className }) {
   const dataList = whyUs.map((item) => {
     return (
-      <ScrollReveal>
+      <ScrollReveal key={item.title}>
         <Card
           title={item.title}
           border-gray-300

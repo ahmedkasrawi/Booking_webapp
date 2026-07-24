@@ -1,4 +1,3 @@
-import Agree from "@mui/icons-material/Done";
 import { useChangeStatus } from "../../../hooks/useBooking";
 import toast from "react-hot-toast";
 import { useState } from "react";
@@ -18,7 +17,7 @@ export default function BookingRow({ booking, client, service, className }) {
     }
   }
   function handelSelect(value) {
-    if (value === "pending" && !(booking.status === "pending")) {
+    if (value === "pending" && booking.status !== "pending") {
       toast.error("لا يمكن جعل الحجز معلق");
       return;
     }

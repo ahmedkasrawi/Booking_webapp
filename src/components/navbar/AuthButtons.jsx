@@ -3,11 +3,11 @@ import Button from '../Button';
 import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function AuthButtons({ isLoading, user, handleLogout,children }) {
+  if(isLoading ) return <span className="text-sm text-gray-500">......</span>
+
   return (
     <div className="hidden items-center gap-3 md:flex">
-      {isLoading ? (
-        <span className="text-sm text-gray-500">......</span>
-      ) : user ? (
+      { user ? (
         <div className="flex items-center gap-4">
           <button
             type="button"

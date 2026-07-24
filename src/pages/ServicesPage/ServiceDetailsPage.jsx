@@ -2,10 +2,9 @@ import { useParams } from "react-router-dom";
 import { useService } from "../../hooks/useServices";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
-import { useAvailable } from "../../hooks/useBooking";
+import { useAvailable, useAddBooking } from "../../hooks/useBooking";
 import { useState } from "react";
 import PageTransition from "../../components/animation/PageTransition";
-import { useAddBooking } from "../../hooks/useBooking";
 import {toast} from "react-hot-toast";
 
 

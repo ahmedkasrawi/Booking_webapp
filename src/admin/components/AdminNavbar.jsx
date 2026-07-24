@@ -11,6 +11,7 @@ export default function AdminNavbar({handelClick}) {
       backdrop-blur-sm border-b border-text-black/50 shadow-sm flex justify-between"
     >
       <button
+      type="button"
         onClick={handelClick}
         className="cursor-pointer bg-text-main/15 p-0.5 rounded"
       >

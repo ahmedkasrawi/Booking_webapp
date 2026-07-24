@@ -1,14 +1,14 @@
 import Container from "../../components/Container";
-import Button from "../../components/Button";
+
 import Header from "../../components/Header";
 import { useAllServices } from "../../hooks/useServices";
 import Product from "./components/Product";
-import { Link } from "react-router-dom";
+
 import PageTransition from "../../components/animation/PageTransition";
 
 
 export default function ServicesPage() {
-  const {isLoading,data} = useAllServices()
+  const {data} = useAllServices()
   const dataList = data?.data.services;
   const list = dataList?.map((item)=> {
     return (
