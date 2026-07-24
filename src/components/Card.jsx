@@ -10,7 +10,7 @@ export default function Card({
   if (type === "img") {
     return (
       <div
-        className={`border-2 pb-10 relative rounded-md duration-400 hover:-translate-y-1 ${className}`}
+        className={`border-2   rounded-md duration-400 hover:-translate-y-1 ${className}`}
       >
         <img
           src={"/hero-sm.jpg"}
@@ -18,8 +18,8 @@ export default function Card({
           alt="خبير"
         />
         {children}
-        <div className="absolute bottom-0 right-0 flex items-center justify-between w-full px-3">
-          <h1 className="my-2 font-bold text-lg  top-3">{data?.title}</h1>
+        <div className="  px-2 my-2 h-19 overflow-hidden">
+          <h1 className="mb-2 font-semibold text-md ">{data?.title}</h1>
           <p className="text-sm text-prg ">{data?.paragraph}</p>
         </div>
       </div>

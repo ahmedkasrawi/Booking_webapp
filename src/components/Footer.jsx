@@ -5,7 +5,7 @@ import YouTube from "@mui/icons-material/YouTube";
 import Email from "@mui/icons-material/Email";
 import Phone from "@mui/icons-material/Phone";
 import { Link } from "react-router-dom";
-
+import {footer} from "../consts/index"
 export default function Footer() {
   return (
     <section className=" bg-text-main/90 text-text-white w-full">
@@ -13,10 +13,7 @@ export default function Footer() {
         <h3 className=" w-full text-2xl font-bold text-start drop-shadow-md drop-shadow-black/60">
           {" مسار"}
         </h3>
-        <p>
-          {`منصة بوح تقدم جلسات استماع وكوتشينغ أونلاين لتعزيز الوعي الذاتي 
-            وتحسين جودة الحياة عبر مدربين متخصصين وتجربة آمنة وسهلة الاستخدام.`}
-        </p>
+        <p>{footer?.title}</p>
         <div className="flex gap-2 py-3">
           <button
             type="button"
@@ -39,7 +36,7 @@ export default function Footer() {
         </div>
         <span className="pb-3 border-t-2 border-text-white"></span>
         <div className="flex flex-wrap sm:w-1/2 xl:w-1/3 justify-between ">
-          <Link  className="hover:text-primary hover:font-bold duration-300">{`الرئيسية`}</Link>
+          <Link className="hover:text-primary hover:font-bold duration-300">{`الرئيسية`}</Link>
           <Link className="hover:text-primary hover:font-bold duration-300">{`الخدمات`}</Link>
           <Link className="hover:text-primary hover:font-bold duration-300">{`المستشارين`}</Link>
           <Link className="hover:text-primary hover:font-bold duration-300">{`الحجوزات`}</Link>
@@ -70,9 +67,7 @@ export default function Footer() {
         </div>
       </Container>
       <Container className=" py-10 relative border-t-2">
-        <p className="text-center w-full ">
-          © 2026 Booking System. All rights reserved.
-        </p>
+        <p className="text-center w-full ">{footer.rights}</p>
       </Container>
     </section>
   );
