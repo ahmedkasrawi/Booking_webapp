@@ -7,12 +7,13 @@ export default function UserSettings({ user }) {
   
   return (
     <div className="relative ">
-      <div
+      <button
+        type="button"
         onClick={() => setIsOpen((c) => !c)}
         className="w-7.5 h-7.5 bg-text-main/20 border rounded-full flex justify-center items-center text-sm cursor-pointer"
       >
         <Person />
-      </div>
+      </button>
       <div
         className={`absolute left-0 -bottom-6.5 translate-x-1/2  border-8 w-2 border-transparent border-b-text-black/80 ${isOpen ? "" : "hidden"}`}
       ></div>

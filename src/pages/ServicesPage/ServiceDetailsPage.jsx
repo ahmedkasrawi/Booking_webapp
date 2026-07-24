@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useService } from "../../hooks/useServices";
-import { Link } from "react-router-dom";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
 import { useAvailable } from "../../hooks/useBooking";
@@ -28,6 +27,7 @@ export default function ServiceDetails() {
     return (
       <button
         key={item}
+        type="button"
         name="time"
         value={item}
         onClick={(e) => handelTime(e.currentTarget)}
@@ -91,6 +91,7 @@ export default function ServiceDetails() {
         </div>
 
         <button
+          type="button"
           onClick={handleBooking}
           className="mt-10 w-full flex justify-center px-10 bg-primary text-white py-1 rounded-2xl hover:bg-primary-hover"
         >

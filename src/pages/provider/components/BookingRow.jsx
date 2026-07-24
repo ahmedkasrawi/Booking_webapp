@@ -50,7 +50,11 @@ export default function BookingRow({ booking, client, service, className }) {
         </select>
       </td>
       <td className={`px-6 py-4 font-medium text-white/90 bg-black/50`}>
-        <button className="cursor-pointer bg-green-500 py-1 px-2 rounded" onClick={handleSubmit}>
+        <button
+          type="button"
+          className="cursor-pointer bg-green-500 py-1 px-2 rounded"
+          onClick={handleSubmit}
+        >
           {"حفظ"}
         </button>
       </td>

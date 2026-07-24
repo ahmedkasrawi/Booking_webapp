@@ -20,7 +20,7 @@ export default function Product({ data, className }) {
       </div>
 
       <button
-        
+        type="button"
         className="my-2 mx-4 flex justify-center bg-primary text-white py-1 px-3 rounded-2xl hover:bg-primary-hover"
       >
         {" عرض"}

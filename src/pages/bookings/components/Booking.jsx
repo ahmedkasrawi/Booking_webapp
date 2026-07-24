@@ -86,6 +86,7 @@ export default function Booking({ booking, provider, service }) {
         {booking?.status === "confirmed" ? (
           <button
             title="محادثة"
+            type="button"
             className="p-2 rounded-lg border text-sky-600 bg-sky-50 hover:bg-sky-500 hover:text-white transition-colors duration-200"
           >
             <Chat fontSize="small" />
@@ -95,6 +96,7 @@ export default function Booking({ booking, provider, service }) {
         )}
         <button
           title="التفاصيل"
+          type="button"
           className="p-2 rounded-lg border text-sky-600 bg-sky-50 hover:bg-sky-500 hover:text-white transition-colors duration-200"
         >
           <DescriptionOutlinedIcon fontSize="small" />
@@ -102,6 +104,7 @@ export default function Booking({ booking, provider, service }) {
 
         <button
           title="إلغاء الحجز"
+          type="button"
           className="p-2 rounded-lg border text-red-600 bg-red-50 hover:bg-red-500 hover:text-white transition-colors duration-200"
         >
           <DeleteOutlineIcon fontSize="small" />

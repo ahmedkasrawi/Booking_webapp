@@ -9,8 +9,8 @@ export default function AuthButtons({ isLoading, user, handleLogout,children }) 
         <span className="text-sm text-gray-500">......</span>
       ) : user ? (
         <div className="flex items-center gap-4">
-          
           <button
+            type="button"
             onClick={handleLogout}
             className="font-bold text-xl hover:text-red-600 transition"
             aria-label="Logout"

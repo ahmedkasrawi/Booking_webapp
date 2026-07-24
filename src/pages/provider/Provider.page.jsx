@@ -15,24 +15,28 @@ export default function BookingsPage() {
         <Header header={" -- الإدارة --"} className="pb-10" />
         <div className="flex justify-center gap-3">
           <button
+            type="button"
             onClick={() => setPage("الحجوزات")}
             className={`py-1 px-2 rounded-lg ${page === "الحجوزات" ? "bg-text-main/80 text-text-white" : "bg-text-main/20 "}`}
           >
             {" الحجوزات"}
           </button>
           <button
+            type="button"
             onClick={() => setPage("إضافة")}
             className={`py-1 px-2 rounded-lg ${page === "إضافة" ? "bg-text-main/80 text-text-white" : "bg-text-main/20 "}`}
           >
             {"إضافة خدمة"}
           </button>
           <button
+            type="button"
             onClick={() => setPage("الخدمات")}
             className={`py-1 px-2 rounded-lg ${page === "الخدمات" ? "bg-text-main/80 text-text-white" : "bg-text-main/20 "}`}
           >
             {" الخدمات "}
           </button>
           <button
+            type="button"
             className={`py-1 px-2 rounded-lg ${page === "المواعيد" ? "bg-text-main/80 text-text-white" : "bg-text-main/20 "}`}
           >
             {" المواعيد"}
@@ -41,11 +45,11 @@ export default function BookingsPage() {
 
         <Container className="flex flex-col min-h-110 rounded gap-5 bg-text-main/15 mt-10 py-10 duration-300">
           {page === "الحجوزات" ? (
-            <BookingsMange/>
+            <BookingsMange />
           ) : page === "إضافة" ? (
             <AddingService />
           ) : (
-            <ServicesMange/>
+            <ServicesMange />
           )}
         </Container>
       </div>

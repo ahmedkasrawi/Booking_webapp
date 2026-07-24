@@ -45,6 +45,7 @@ export default function Product({ data, handelClick, time }) {
           </div>
         </div>
         <button
+        type="button"
           disabled={!time}
           onClick={handelClick}
           className="w-full bg-primary disabled:bg-text-main/50 text-text-white py-2.5 px-4 rounded-xl font-bold transition-colors duration-300 hover:bg-primary-hover active:scale-95 disabled:active:scale-100 flex justify-center cursor-pointer disabled:cursor-not-allowed items-center gap-2"

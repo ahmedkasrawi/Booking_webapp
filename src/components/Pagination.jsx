@@ -31,6 +31,7 @@ export default function Pagination({ pagination, setPage,className }) {
     <div className={`${className}`}>
       <div className="flex justify-center gap-2 ">
         <button
+          type="button"
           disabled={!pagination?.isPreviousPage}
           className="py-1 px-2 bg-primary/50 cursor-pointer rounded disabled:bg-text-black/40 disabled:cursor-not-allowed"
           onClick={handelPrev}
@@ -41,6 +42,7 @@ export default function Pagination({ pagination, setPage,className }) {
           ""
         ) : (
           <button
+            type="button"
             disabled={pagination?.currentPage === 1}
             className="py-1 px-2 bg-primary/50 cursor-pointer rounded disabled:bg-text-black/40 disabled:cursor-not-allowed"
             onClick={toOne}
@@ -56,6 +58,7 @@ export default function Pagination({ pagination, setPage,className }) {
           ""
         ) : (
           <button
+            type="button"
             disabled={pagination?.currentPage === pagination?.totalPages}
             className="py-1 px-2 bg-primary/50 cursor-pointer rounded disabled:bg-text-black/40 disabled:cursor-not-allowed"
             onClick={toEnd}
@@ -65,6 +68,7 @@ export default function Pagination({ pagination, setPage,className }) {
         )}
 
         <button
+          type="button"
           disabled={!pagination?.isNextPage}
           className="py-1 px-2 bg-primary/50 cursor-pointer rounded disabled:bg-text-black/40 disabled:cursor-not-allowed"
           onClick={handelNext}

@@ -77,9 +77,9 @@ export default function LoginPage() {
             handle={handleInputs}
             className="w-full py-1 md:py-2 text-text-black"
           />
-          <a href="" className=" text-red-500 text-sm md:text-md self-end">
+          <span href="" className=" text-red-500 text-sm md:text-md self-end">
             forget password
-          </a>
+          </span>
         </div>
         <input
           type="submit"

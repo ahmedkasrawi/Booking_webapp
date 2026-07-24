@@ -18,32 +18,50 @@ export default function Footer() {
             وتحسين جودة الحياة عبر مدربين متخصصين وتجربة آمنة وسهلة الاستخدام.`}
         </p>
         <div className="flex gap-2 py-3">
-          <button className="p-2 bg-primary/25 rounded-md duration-300 cursor-pointer hover:bg-sky-500 hover:text-white">
+          <button
+            type="button"
+            className="p-2 bg-primary/25 rounded-md duration-300 cursor-pointer hover:bg-sky-500 hover:text-white"
+          >
             <Facebook />
           </button>
-          <button className="p-2 bg-primary/25 rounded-md duration-300 cursor-pointer hover:bg-green-400 hover:text-white">
+          <button
+            type="button"
+            className="p-2 bg-primary/25 rounded-md duration-300 cursor-pointer hover:bg-green-400 hover:text-white"
+          >
             <WhatsApp />
           </button>
-          <button className="p-2 bg-primary/25 rounded-md duration-300 cursor-pointer hover:bg-red-500 hover:text-white">
+          <button
+            type="button"
+            className="p-2 bg-primary/25 rounded-md duration-300 cursor-pointer hover:bg-red-500 hover:text-white"
+          >
             <YouTube />
           </button>
         </div>
         <span className="pb-3 border-t-2 border-text-white"></span>
         <div className="flex flex-wrap sm:w-1/2 xl:w-1/3 justify-between ">
-          <Link className="hover:text-primary hover:font-bold duration-300">{`الرئيسية`}</Link>
+          <Link  className="hover:text-primary hover:font-bold duration-300">{`الرئيسية`}</Link>
           <Link className="hover:text-primary hover:font-bold duration-300">{`الخدمات`}</Link>
           <Link className="hover:text-primary hover:font-bold duration-300">{`المستشارين`}</Link>
           <Link className="hover:text-primary hover:font-bold duration-300">{`الحجوزات`}</Link>
-          <Link to={"/provider"} className="hover:text-primary hover:font-bold duration-300">{`قدم كخبير`}</Link>
+          <Link
+            to={"/provider"}
+            className="hover:text-primary hover:font-bold duration-300"
+          >{`قدم كخبير`}</Link>
         </div>
         <div className="flex flex-col gap-4">
-          <button className="flex gap-3 items-center cursor-pointer">
+          <button
+            type="button"
+            className="flex gap-3 items-center cursor-pointer"
+          >
             <div className="p-2 bg-primary/25 rounded-md duration-300 hover:bg-sky-500 hover:text-white">
               <Email />
             </div>
             care@bauhspace.com
           </button>
-          <button className="flex gap-3 items-center cursor-pointer">
+          <button
+            type="button"
+            className="flex gap-3 items-center cursor-pointer"
+          >
             <div className="p-2 bg-primary/25 rounded-md duration-300 hover:bg-sky-500 hover:text-white">
               <Phone />
             </div>

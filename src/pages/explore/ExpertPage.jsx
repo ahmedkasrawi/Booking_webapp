@@ -8,7 +8,6 @@ import { useAvailable } from "../../hooks/useBooking";
 import { useAllServices } from "../../hooks/useServices";
 import Product from "./components/Product";
 import BookService from "./components/BookService";
-import toast from "react-hot-toast";
 
 export default function ExpertsPage() {
   const [dataBooking, setDataBooking] = useState({});
@@ -33,6 +32,7 @@ export default function ExpertsPage() {
     return (
       <button
         key={item}
+        type="button"
         name="time"
         value={item}
         onClick={(e) => handelTime(e.currentTarget)}
@@ -117,22 +117,22 @@ export default function ExpertsPage() {
               </h3>
 
               <div className="mb-8">
-                <label className="block font-semibold text-text-main mb-3 text-sm">
+                <label className=" font-semibold text-text-main mb-3 text-sm flex items-center gap-2">
                   اختر التاريخ:
+                  <input
+                    onChange={(e) => handelTime(e.currentTarget)}
+                    type="date"
+                    name="date"
+                    value={date.date}
+                    className="w-full md:w-1/2 p-3 rounded-xl border border-text-main/20 bg-transparent text-text-main focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all cursor-pointer"
+                  />
                 </label>
-                <input
-                  onChange={(e) => handelTime(e.currentTarget)}
-                  type="date"
-                  name="date"
-                  value={date.date}
-                  className="w-full md:w-1/2 p-3 rounded-xl border border-text-main/20 bg-transparent text-text-main focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all cursor-pointer"
-                />
               </div>
 
               <div>
-                <label className="block font-semibold text-text-main mb-4 text-sm">
+                <span className="block font-semibold text-text-main mb-4 text-sm">
                   الأوقات المتاحة:
-                </label>
+                </span>
                 {list && list.length > 0 ? (
                   <div className="flex gap-3 flex-wrap">{list}</div>
                 ) : (

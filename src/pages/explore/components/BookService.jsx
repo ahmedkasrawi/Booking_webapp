@@ -27,10 +27,16 @@ export default function BookService({
   }
   return (
     <div
+    role="button"
+    onKeyDown
+    tabIndex={0}
       onClick={() => setIsOpen(false)}
       className={`flex justify-center items-center w-full h-full z-50 top-0 left-0 fixed bg-black/50 ${className}`}
     >
-      <div onClick={(e)=> e.stopPropagation()} className="bg-white py-6 px-4 w-2/3 md:w-1/2 lg:w-1/3 rounded-md">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white py-6 px-4 w-2/3 md:w-1/2 lg:w-1/3 rounded-md"
+      >
         <h3 className="">
           {"الخدمة: "}
           {data?.title}
@@ -45,12 +51,14 @@ export default function BookService({
         </h3>
         <div className=" py-3 gap-1 w-full text-white flex">
           <button
+            type="submit"
             onClick={handleBooking}
             className="w-full bg-green-500 py-1 px-3 rounded-md"
           >
             {"تأكيد"}
           </button>
           <button
+            type="button"
             onClick={() => setIsOpen(false)}
             className="w-full bg-red-600 py-1 px-3 rounded-md"
           >

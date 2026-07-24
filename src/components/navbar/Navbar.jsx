@@ -39,6 +39,7 @@ export default function Navbar() {
   };
   let moodButton = (
     <button
+      type="button"
       className="cursor-pointer text-text-main hover:animate-pulse"
       onClick={handelMoodClick}
     >

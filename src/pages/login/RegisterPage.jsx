@@ -101,9 +101,9 @@ export default function RegisterPage() {
           className="bg-black cursor-pointer text-white rounded-md px-10 py-3 w-full hover:bg-gray-800 disabled:bg-gray-400"
         />
 
-        <a href="" className="  self-end">
+        <span href="" className="  self-end">
           {"نسيت كلمة السر"}
-        </a>
+        </span>
         <Link to="/login" className="font-bold text-lg">
           {"تسجيل الدخول"}
         </Link>

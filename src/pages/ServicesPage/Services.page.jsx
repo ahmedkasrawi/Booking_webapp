@@ -23,13 +23,22 @@ export default function ServicesPage() {
           <Header header={"خدمات الخبراء"} />
 
           <div className="flex gap-2">
-            <button className="bg-text-main/70 text-text-white py-1 px-2 cursor-pointer rounded hover:bg-text-main/80">
+            <button
+              type="button"
+              className="bg-text-main/70 text-text-white py-1 px-2 cursor-pointer rounded hover:bg-text-main/80"
+            >
               {"الكل"}
             </button>
-            <button className="bg-text-main/70 text-text-white py-1 px-2 cursor-pointer rounded hover:bg-text-main/80">
+            <button
+              type="button"
+              className="bg-text-main/70 text-text-white py-1 px-2 cursor-pointer rounded hover:bg-text-main/80"
+            >
               {"جلسة نصح"}
             </button>
-            <button className="bg-text-main/70 text-text-white py-1 px-2 cursor-pointer rounded hover:bg-text-main/80">
+            <button
+              type="button"
+              className="bg-text-main/70 text-text-white py-1 px-2 cursor-pointer rounded hover:bg-text-main/80"
+            >
               {" مسار المهني "}
             </button>
           </div>
