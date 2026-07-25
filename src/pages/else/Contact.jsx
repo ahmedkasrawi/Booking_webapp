@@ -1,12 +1,12 @@
 import PageTransition from "../../components/animation/PageTransition";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
-import Card from ".//Card";
+import Card from "./components/Card";
 
 function Contact() {
   return (
     <PageTransition>
-      <div className="py-15 mt-5 text-text-prg">
+      <div className="pt-15 mb-25 mt-5 text-text-prg">
         <Container>
           <Header
             header={"تريد مساعدة؟ نحن هنا لأجلك"}
