@@ -5,12 +5,10 @@ export default function MobileMenu({
   setMenuOpen,
   menuOpen,
   navItems,
-  isLoading,
   handleLogout,
   user,
   children
 }) {
-  if(isLoading ) return <span className="px-4 py-2 text-gray-500">Loading...</span>
     
   return (
     <>

@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from '../Button';
 import LogoutIcon from "@mui/icons-material/Logout";
 
-export default function AuthButtons({ isLoading, user, handleLogout,children }) {
-  if(isLoading ) return <span className="text-sm text-gray-500">......</span>
+export default function AuthButtons({ user, handleLogout,children }) {
 
   return (
     <div className="hidden items-center gap-3 md:flex">
