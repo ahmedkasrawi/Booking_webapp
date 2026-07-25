@@ -22,6 +22,7 @@ export default function Navbar() {
   const navItems = [
     { label: "الرئيسية", href: "/home" },
     { label: "استكشاف", href: "/explore" },
+    { label: "تواصل معنا", href: "/contact" },
     ...(user?.role === "admin" ? [{ label: "الأدمن", href: "/admin" }] : []),
     ...(user?.role === "user"
       ? [{ label: "الحجوزات", href: "/bookings" }]
