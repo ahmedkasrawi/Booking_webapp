@@ -36,8 +36,9 @@
   --text-black: #fff;
 }
 ::selection {
-  background: var(--text-prg);
-  color:var(--bg-main)
+  background: #005c3de2;
+  color: rgb(221, 221, 221);
+
 }
 html {
   background-color: var(--bg-main);
