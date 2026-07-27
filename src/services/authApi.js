@@ -18,6 +18,10 @@ export const getMe = async () => {
   const response = await axiosInstance.get("/auth/me");
   return response.data.data.user;
 };
+export const updateMe = async (userData) => {
+  const response = await axiosInstance.patch("/auth/me", userData);
+  return response.data.data.user;
+};
 
 export const login = async (userData) => {
   const response = await axiosInstance.post("/auth/login", userData);

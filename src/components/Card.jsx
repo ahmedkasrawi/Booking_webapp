@@ -33,7 +33,7 @@ export default function Card({
         break;
       }
     }
-    const starsIcons = stars.map((index) => {
+    const starsIcons = stars.map((item,index) => {
       return (
         <Star
           key={index}

@@ -6,6 +6,7 @@ import {
   beProvider,
   getAllProviders,
   getProvider,
+  updateMe
 } from "../services/authApi";
 
 export const useUser = () => {
@@ -48,7 +49,19 @@ export const useRegister = () => {
       queryClient.setQueryData(["auth"], { data: { user: data.data.user } });
     },
   });
+}
+
+export const useUpdateMe = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: updateMe,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["auth"] });
+      queryClient.invalidateQueries({ queryKey: ["auth me"] });
+    },
+  });
 };
+
 export const useBeProvider = () => {
   const queryClient = useQueryClient();
   return useMutation({

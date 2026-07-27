@@ -17,6 +17,7 @@ const ProviderBooking = lazy(() => import("./pages/provider/Provider.page"));
 const AdminPage = lazy(() => import("./admin/AdminPage"));
 const ContactPage = lazy(() => import("./pages/else/ContactPage"));
 const AboutPage = lazy(() => import("./pages/else/AboutPage"));
+const SettingsPage = lazy(() => import("./pages/settings/SettingsPage"));
 
 // layout
 import MainLayout from "./pages/else/MainLayout";
@@ -45,6 +46,7 @@ function App() {
             <Route path="/explore" element={<ExplorePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
 
             <Route element={<RouteProtect allowedRoles={["user"]} />}>
               <Route path="/bookings" element={<BookingsPage />} />

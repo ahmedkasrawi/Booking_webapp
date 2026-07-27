@@ -3,9 +3,9 @@ import Header from "../../../components/Header";
 import ScrollReveal from "../../../components/ScrollReveal";
 import {about} from "../../../consts/index"
 export default function About({ className }) {
-  const services = about?.services?.map((item)=> {
+  const services = about?.services?.map((item,index)=> {
     return (
-      <ScrollReveal>
+      <ScrollReveal key={index}>
         <p className="text-prg text-xl pb-2">
           {item}
         </p>

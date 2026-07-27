@@ -28,7 +28,7 @@ export default function UserSettings({ user }) {
           {"الإيميل: "}
           {user?.email}
         </div>
-        <Link className="bg-primary flex justify-center text-white rounded mt-2">
+        <Link to={"/settings"} className="bg-primary flex justify-center text-white rounded mt-2">
           {"الإعدادات"}
         </Link>
       </div>
