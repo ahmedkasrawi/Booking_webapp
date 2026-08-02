@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 export default function SettingsPage() {
   const { data: user } = useUser();
   const { mutateAsync } = useUpdateMe();
-  
+
   const [obj, setObj] = useState({
     name: "",
     bio: "",
@@ -16,7 +16,7 @@ export default function SettingsPage() {
   });
 
   useEffect(() => {
-    if(user){
+    if (user) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setObj({
         name: user.name || "",
@@ -24,7 +24,6 @@ export default function SettingsPage() {
         bio: user.bio || "",
       });
     }
-    
   }, [user]);
   function handelChange(ele) {
     setObj((c) => {
@@ -33,9 +32,15 @@ export default function SettingsPage() {
   }
   function handelSave(e) {
     e.preventDefault();
+
     try {
-      mutateAsync(obj);
-      toast.success(" تم الحفظ");
+      if (obj.name.length < 3) {
+        toast.error("الاسم يجب ان يكون اكثر من 3 احرف");
+        return;
+      } 
+        mutateAsync(obj);
+        toast.success(" تم الحفظ");
+      
     } catch {
       toast.error("لم يتم الحفظ");
     }
@@ -43,7 +48,7 @@ export default function SettingsPage() {
   return (
     <PageTransition>
       <div className="pt-10 pb-25 min-h-[91vh] mt-18 xl:mt-16">
-        <Header header={"حسابك"} className="pb-10" />
+        <Header header={"الإعدادات"} className="pb-10" />
         <Container className="w-full flex justify-center gap-3 mb-7">
           <form className="bg-text-main/10 w-full px-5 py-10 flex flex-col gap-5 rounded">
             <div className="flex justify-center items-center flex-col">

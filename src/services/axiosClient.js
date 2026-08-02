@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3001/api",
+  baseURL: "https://booking-system-production-a809.up.railway.app",
   headers: {
     "Content-Type": "application/json",
   },
@@ -20,3 +20,5 @@ axiosInstance.interceptors.request.use(
 );
 
 export default axiosInstance;
+
+// "http://localhost:3001/api"
