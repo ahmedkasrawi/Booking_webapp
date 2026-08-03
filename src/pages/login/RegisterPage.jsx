@@ -46,17 +46,17 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="fixed w-full h-screen bg-black/60 top-0 z-200 flex justify-center items-center">
+    <div className="fixed w-full h-screen bg-black/60 text-text-main top-0 z-40 flex justify-center items-center">
       <form
-        className="bg-white/98
-          w-9/10 md:w-5/7 lg:w-6/10  py-10 px-5 md:px-15
+        className="bg-bg-main/98
+          w-9/10 sm:w-8/11 md:w-5/7 xl:w-1/2 h-fit py-10 px-5 md:px-15
           lg:px-20 flex flex-col justify-around items-center
-          rounded-2xl gap-5 shadow-sm shadow-mist-450 text-center
+          rounded-xl gap-3 md:gap-5 shadow-sm shadow-mist-450 text-center
         "
       >
         <LockPersonIcon fontSize="large" />
-        <h1 className="font-bold text-2xl">{"امن حجوزاتك"}</h1>
-        <p className="font-medium text-lg text-gray-600">
+        <h1 className="font-bold text-xl md:text-2xl">{"امن حجوزاتك"}</h1>
+        <p className="font-medium text-sm md:text-lg text-text-main">
           {" رجاءا سجل الدخول او اقم بانشاء حساب جديد لتقوم بالحجز"}
         </p>
 
@@ -66,7 +66,7 @@ export default function RegisterPage() {
           name="name"
           value={inputs.name}
           handle={handleInputs}
-          className="w-full py-3"
+          className=" text-text-black"
         />
         <Input
           title={"الايميل:"}
@@ -74,7 +74,7 @@ export default function RegisterPage() {
           name="email"
           value={inputs.email}
           handle={handleInputs}
-          className="w-full py-3"
+          className=" text-text-black"
         />
         <Input
           title={"كلمة السر:"}
@@ -82,7 +82,7 @@ export default function RegisterPage() {
           name="password"
           value={inputs.password}
           handle={handleInputs}
-          className="w-full py-3"
+          className=" text-text-black"
         />
         <Input
           title={"تاكيد كلمة السر:"}
@@ -90,22 +90,22 @@ export default function RegisterPage() {
           name="confirm"
           value={inputs.passwordConfirm}
           handle={handleInputs}
-          className="w-full py-3"
+          className=" text-text-black"
         />
         <input
           type="submit"
           disabled={error}
           onClick={handleSubmit}
           value="Login"
-          className="bg-black cursor-pointer text-white rounded-md px-10 py-3 w-full hover:bg-gray-800 disabled:bg-gray-400"
+          className="bg-black cursor-pointer text-white rounded-md px-10 py-3 sm:py-2 w-full hover:bg-gray-800 disabled:bg-gray-400"
         />
 
-        <span href="" className="  self-end">
-          {"نسيت كلمة السر"}
-        </span>
-        <Link to="/login" className="font-bold text-lg">
-          {"تسجيل الدخول"}
-        </Link>
+        <div className="font-semibold mt-2 w-full text-sm md:text-lg rounded px-1  flex justify-center items-center">
+          {"لديك حساب بالفعل؟ "}
+          <Link to="/login" className="text-sky-600 ms-1">
+            سجل الدخول
+          </Link>
+        </div>
       </form>
     </div>
   );

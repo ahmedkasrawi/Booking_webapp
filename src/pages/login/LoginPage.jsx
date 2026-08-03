@@ -88,12 +88,10 @@ export default function LoginPage() {
           className="bg-black flex-2 cursor-pointer text-white rounded-md  py-1 md:py-2 w-full hover:bg-gray-800 disabled:bg-gray-400"
         />
 
-        <div>
-          <Link
-            to="/register"
-            className="font-semibold w-full text-sm md:text-lg rounded px-1  flex justify-center items-center text-sky-600"
-          >
-            إنشاء حساب
+        <div className="font-semibold mt-2 w-full text-sm md:text-lg rounded px-1  flex justify-center items-center">
+          {" ليس لديك حساب؟ "}
+          <Link to="/register" className="text-sky-600 ms-1">
+            انشاء الآن
           </Link>
         </div>
       </form>
